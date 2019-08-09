@@ -2,6 +2,12 @@
 
 const users = ['Mango', 'Poly', 'Ajax', 'Chelsey'];
 
+const userToDelete = 'Ajax';
+
+const userToInsert = 'Kong';
+
+const insertBefore = 'Jay';
+
 console.log(users.shift());
 console.log(users);
 
@@ -11,14 +17,11 @@ console.log(users);
 console.log(users.unshift('Lux'));
 console.log(users);
 
-users.splice(3, 0, 'Jay', 'Kiwi');
+users.push('Jay', 'Kiwi');
 console.log(users);
 
-const userToDelete = 'Ajax';
-users.splice(2, 1);
+users.splice(users.indexOf(userToDelete), 1);
 console.log(users);
 
-const userToInsert = 'Kong';
-const insertBefore = 'Jay';
-users.splice(2, 0, 'Kong');
+users.splice(users.indexOf(insertBefore), 0, userToInsert);
 console.log(users);

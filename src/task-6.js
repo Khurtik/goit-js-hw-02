@@ -1,15 +1,10 @@
 'use strict';
 
 const checkForSpam = function(string) {
-  for (const word of string) {
-    if (
-      string.toLowerCase().includes('sale') ||
-      string.toLowerCase().includes('spam')
-    ) {
-      return true;
-    }
-    return false;
-  }
+  return (
+    string.toLowerCase().includes('sale') ||
+    string.toLowerCase().includes('spam')
+  );
 };
 
 console.log(checkForSpam('Latest technology news'));
